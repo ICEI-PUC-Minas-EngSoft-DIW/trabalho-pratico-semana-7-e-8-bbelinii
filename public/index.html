@@ -1,82 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2-Step Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styless.cs">  
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
+
+    <div class="header bg-dark text-white rounded-bottom">
+        <header class="container d-flex justify-content-between align-items-center py-3">
             <div class="logo">
-                <img src="imagens/logo.png" alt="2-Step logo">
+                <img src="imagens/logo.png" alt="Logo do site" class="img-fluid" style="height: 120px;">
             </div>
-            <nav class="site-nav">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Postagens</a></li>
-                    <li><a href="#">Entrar</a></li>
+            <nav class="menu">
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Categorias</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Postagens</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Entrar</a></li>
                 </ul>
             </nav>
+        </header>
+    </div>
+
+    <!-- Banner -->
+    <div class="mensagembanner text-center py-4">
+        <p class="fs-4 fw-bold">O seu conhecimento pode sanar a curiosidade de alguém!</p>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Categorias -->
+            <div class="col-md-4"> 
+                <div class="menul bg-white p-4 rounded shadow text-start"> 
+                    <nav class="principais">
+                        <p class="fw-bold fs-4">Categorias:</p> 
+                        <ul class="list-unstyled">
+                            <li class="fs-5">Motores</li> 
+                            <li class="fs-5">Turbo</li>
+                            <li class="fs-5">Elétrica</li>
+                            <li class="fs-5">Estética</li>
+                            <li class="fs-5">Injeção Programável</li>
+                            <li class="fs-5">Reprogramação Eletrônica</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            
+            <div class="col-md-8">
+                <div class="busca d-flex justify-content-end mb-3">
+                    <input type="text" id="busca" class="form-control me-2" placeholder="Buscar Postagem..." style="max-width: 300px;">
+                    <button type="button" class="btn btn-primary">Criar nova postagem</button>
+                </div>
+                <h3>Postagens</h3>
+                <div class="postagens">
+                    <!-- Postagem 1 -->
+                    <div class="postagem d-flex align-items-start bg-white p-3 rounded shadow mb-3">
+                        <img src="imagens/sherek.jpg" alt="Foto do usuário" class="rounded-circle me-3" style="width: 80px; height: 80px;">
+                        <div class="conteudo">
+                            <h4>Autor: Pedro Henrique</h4>
+                            <p>Data de publicação: 12 de setembro de 2025</p>
+                            <article>Fala pessoal, passando pra compartilhar uma situação chata que rolou com meu Fastback Abarth. Sempre gostei do carro, mas ultimamente venho percebendo um barulho estranho na suspensão — principalmente quando passo em lombada ou pego uma rua mais irregular. O som é aquele estalo ou rangido que parece vir da frente do carro e incomoda bastante, principalmente pra quem curte rodar com tudo em ordem.
+                                Levei na concessionária, mas ainda não conseguiram resolver o problema. Disseram que talvez seja peça que demora pra chegar, ou às vezes alegam que 'é normal'. Sei que outros donos também já passaram por isso, então decidi compartilhar pra juntar relatos e ver se alguém tem dica do que pode ser ou conseguiu resolver. Trocar experiências assim é essencial pra não ficar preso só no discurso da montadora.</article>
+                            <p>Membro desde: 10/06/2025</p>
+                        </div>
+                    </div>
+                    <!-- Postagem 2 -->
+                    <div class="postagem d-flex align-items-start bg-white p-3 rounded shadow mb-3">
+                        <img src="imagens/barney.jpeg" alt="Foto do usuário" class="rounded-circle me-3" style="width: 80px; height: 80px;">
+                        <div class="conteudo">
+                            <h4>Autor: Maria Clara</h4>
+                            <p>Data de publicação: 10 de setembro de 2025</p>
+                            <article>Oi pessoal, vim compartilhar um problema que está me incomodando no meu Honda Civic. Nas últimas semanas, notei um barulho estranho vindo da suspensão sempre que passo por buracos ou ruas irregulares — parece um rangido ou estalo que vem da parte dianteira. Não é algo que acontecia antes e acaba tirando um pouco do prazer de dirigir, principalmente pra quem gosta do carro alinhado e tranquilo.
+                                Já levei em oficina, mas ninguém conseguiu identificar ao certo o motivo. Algumas pessoas dizem que pode ser o coxim ou alguma peça desgastada, mas por enquanto sigo sem uma solução definitiva. Resolvi postar aqui pra ver se mais alguém teve essa experiência e, quem sabe, compartilhar alguma dica ou solução que funcionou de verdade. Trocar essas informações sempre ajuda!</article>
+                            <p>Membro desde: 19/04/2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
 
-    <section class="banner">
-        <p>O seu conhecimento pode sanar a curiosidade de alguém!</p>
-    </section>
-
-    <main class="container">
-        <aside class="menul">
-            <nav class="principais">
-                <p class="title">Categorias:</p>
-                <ul>
-                    <li>Motores</li>
-                    <li>Turbo</li>
-                    <li>Elétrica</li>
-                    <li>Estética</li>
-                    <li>Injeção Programável</li>
-                    <li>Reprogramação Eletrônica</li>
-                </ul>
-            </nav>
-        </aside>
-
-        <section class="menur">
-            <div class="busca">
-                <input type="text" id="busca" placeholder="Buscar Postagem...">
-                <button id="criar">Criar nova postagem</button>
-            </div>
-
-            <h3>Postagens</h3>
-
-            <div class="postagens">
-                <article class="postagem">
-                    <img src="imagens/sherek.jpg" alt="autor">
-                    <div class="conteudo">
-                        <h4>Autor: Pedro Henrique</h4>
-                        <p class="data">Data de publicação: 12 de setembro de 2025</p>
-                        <p class="texto">Fala pessoal, passando pra compartilhar uma situação chata que rolou com meu Fastback Abarth. Sempre gostei do carro, mas ultimamente venho percebendo um barulho estranho na suspensão...</p>
-                        <p class="membro">Membro desde: 10/06/2025</p>
-                    </div>
-                </article>
-
-                <article class="postagem">
-                    <img src="imagens/barney.jpeg" alt="autor">
-                    <div class="conteudo">
-                        <h4>Autor: Maria Clara</h4>
-                        <p class="data">Data de publicação: 10 de setembro de 2025</p>
-                        <p class="texto">Oi pessoal, vim compartilhar um problema que está me incomodando no meu Honda Civic. Nas últimas semanas, notei um barulho estranho vindo da suspensão...</p>
-                        <p class="membro">Membro desde: 19/04/2025</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>Copyright @ 2025 - 2-Step Automotive Blog</p>
-        <img src="imagens/Logo Footer.png" alt="Logo footer">
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="mb-0">Copyright @ 2025 - 2-Step Automotive Blog</p>
+            <img src="/trabalho-pratico-semana-3-bbelinii/public/imagens/Logo Footer.png" alt="Logo Footer" class="img-fluid" style="height: 50px;">
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
