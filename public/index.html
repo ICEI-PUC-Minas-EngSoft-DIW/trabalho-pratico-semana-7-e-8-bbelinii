@@ -1,13 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>2-Step Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Olá mundo</h1>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="imagens/logo.png" alt="2-Step logo">
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Postagens</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <p>O seu conhecimento pode sanar a curiosidade de alguém!</p>
+    </section>
+
+    <main class="container">
+        <aside class="menul">
+            <nav class="principais">
+                <p class="title">Categorias:</p>
+                <ul>
+                    <li>Motores</li>
+                    <li>Turbo</li>
+                    <li>Elétrica</li>
+                    <li>Estética</li>
+                    <li>Injeção Programável</li>
+                    <li>Reprogramação Eletrônica</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="menur">
+            <div class="busca">
+                <input type="text" id="busca" placeholder="Buscar Postagem...">
+                <button id="criar">Criar nova postagem</button>
+            </div>
+
+            <h3>Postagens</h3>
+
+            <div class="postagens">
+                <article class="postagem">
+                    <img src="imagens/sherek.jpg" alt="autor">
+                    <div class="conteudo">
+                        <h4>Autor: Pedro Henrique</h4>
+                        <p class="data">Data de publicação: 12 de setembro de 2025</p>
+                        <p class="texto">Fala pessoal, passando pra compartilhar uma situação chata que rolou com meu Fastback Abarth. Sempre gostei do carro, mas ultimamente venho percebendo um barulho estranho na suspensão...</p>
+                        <p class="membro">Membro desde: 10/06/2025</p>
+                    </div>
+                </article>
+
+                <article class="postagem">
+                    <img src="imagens/barney.jpeg" alt="autor">
+                    <div class="conteudo">
+                        <h4>Autor: Maria Clara</h4>
+                        <p class="data">Data de publicação: 10 de setembro de 2025</p>
+                        <p class="texto">Oi pessoal, vim compartilhar um problema que está me incomodando no meu Honda Civic. Nas últimas semanas, notei um barulho estranho vindo da suspensão...</p>
+                        <p class="membro">Membro desde: 19/04/2025</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Copyright @ 2025 - 2-Step Automotive Blog</p>
+        <img src="imagens/Logo Footer.png" alt="Logo footer">
+    </footer>
 </body>
 </html>
