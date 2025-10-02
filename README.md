@@ -12,9 +12,9 @@ Leia o enunciado completo no Canvas.
 
 ## Informações Gerais
 
-- Nome:
+- Nome: Bernardo Belini Vale
 - Matricula:
-- Proposta de projeto escolhida:
+- Proposta de projeto escolhida: 
 - Breve descrição sobre seu projeto:
 
 ## Print da Home-Page
