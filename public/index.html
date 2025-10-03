@@ -72,5 +72,69 @@
         <img src="imagens/Logo Footer.png" alt="Logo footer">
     </footer>
     <script src="app.js"></script>
+    <script>
+        function criarPostagem(post) {
+            const article = document.createElement('article');
+            article.className = 'postagem';
+            
+            let textoResumido = post.texto;
+            if (textoResumido.length > 150) {
+                textoResumido = textoResumido.substring(0, 150) + '...';
+            }
+            
+            article.innerHTML = `
+                <img src="${post.imagem}" alt="autor">
+                <div class="conteudo">
+                    <h4>Autor: ${post.autor}</h4>
+                    <p class="data">Data de publicação: ${post.data}</p>
+                    <p class="texto">${textoResumido}</p>
+                    <p class="membro">Membro desde: ${post.membro}</p>
+                </div>
+            `;
+            
+            article.onclick = function() {
+                window.location.href = 'postagem.html?id=' + post.id;
+            };
+            
+            return article;
+        }
+        
+        function mostrarPostagens() {
+            const container = document.querySelector('.postagens');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < postagens.length; i++) {
+                const postagem = criarPostagem(postagens[i]);
+                container.appendChild(postagem);
+            }
+        }
+        
+        function buscarPostagens() {
+            const termoBusca = document.getElementById('busca').value.toLowerCase();
+            const container = document.querySelector('.postagens');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < postagens.length; i++) {
+                const post = postagens[i];
+                
+                if (post.autor.toLowerCase().includes(termoBusca) || 
+                    post.texto.toLowerCase().includes(termoBusca)) {
+                    
+                    const postagem = criarPostagem(post);
+                    container.appendChild(postagem);
+                }
+            }
+        }
+        
+        window.onload = function() {
+            mostrarPostagens();
+            
+            document.getElementById('busca').oninput = buscarPostagens;
+            
+            document.getElementById('criar').onclick = function() {
+                alert('Funcionalidade em desenvolvimento!');
+            };
+        };
+    </script>
 </body>
 </html>

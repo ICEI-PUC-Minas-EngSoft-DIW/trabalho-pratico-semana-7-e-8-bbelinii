@@ -44,14 +44,12 @@
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(nome);
         }
+        
         const idPostagem = obterParametroUrl('id');
         
-        // Encontrar a postagem correspondente no array de postagens
         const postagemSelecionada = postagens.find(post => post.id === idPostagem);
         
-        // Verificar se a postagem foi encontrada
         if (postagemSelecionada) {
-            // Criar o HTML para exibir a postagem
             const conteudoHTML = `
                 <article class="postagem-completa">
                     <div class="postagem-header">
@@ -66,10 +64,8 @@
                 </article>
             `;
             
-            // Inserir o HTML no elemento de conteúdo
             document.getElementById('postagem-conteudo').innerHTML = conteudoHTML;
         } else {
-            // Caso a postagem não seja encontrada
             document.getElementById('postagem-conteudo').innerHTML = '<p>Postagem não encontrada!</p>';
         }
     </script>
