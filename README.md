@@ -12,32 +12,38 @@ Leia o enunciado completo no Canvas.
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Bernardo Belini Vale
+- Matricula: 
+- Proposta de projeto escolhida: Blog Automotivo
+- Breve descrição sobre seu projeto: Um blog dedicado a entusiastas de automóveis onde os usuários podem compartilhar experiências, problemas e soluções relacionados aos seus veículos. A plataforma permite visualizar postagens na página principal e acessar detalhes completos ao clicar em cada postagem.
 
 ## Print da Home-Page
 
-<<  COLOQUE A IMAGEM AQUI >>
+![alt text](<public/imagens/home page.png>)
 
 ## Print da página de detalhes do item
 
-<<  COLOQUE A IMAGEM AQUI >>
+![alt text](public/imagens/Screenshot_1.png)
 
 ## Cole aqui abaixo a estrutura JSON utilizada no app.js
 
 ```javascript
-const dados = [
+
+const postagens = [
   {
-    "id": 1,
-    "titulo": "Prefeitura Lança Plano de Mobilidade Urbana",
-    "descricao": "Novo plano do transporte público.",
-    "conteudo": "A Prefeitura apresentou nesta segunda-feira um novo plano de mobilidade urbana.",
-    "categoria": "Cidades",
-    "autor": "Joana Ribeiro",
-    "data": "2025-03-30",
-    "imagem": "img/mobilidade.jpg"
+    id: "1",
+    autor: "Pedro Henrique",
+    data: "12 de setembro de 2025",
+    texto:"Fala pessoal, passando pra compartilhar uma situação chata que rolou com meu Fastback Abarth. Sempre gostei do carro, mas ultimamente venho percebendo um barulho estranho na suspensão, especialmente quando passo por buracos ou pisos irregulares. Parece um rangido que não tinha antes, e tô começando a ficar preocupado. Já conferi as buchas e parece que algumas estão meio gastas, mas ainda não levei no mecânico para um diagnóstico mais detalhado.",
+    membro: "10/06/2025",
+    imagem: "imagens/sherek.jpg"
+  },
+  {
+    id: "2",
+    autor: "Maria Clara",
+    data: "10 de setembro de 2025",
+    texto:"Fala pessoal, passando pra compartilhar uma situação chata que rolou com meu Fastback Abarth. Sempre gostei do carro, mas ultimamente venho percebendo um barulho estranho na suspensão, especialmente quando passo por buracos ou pisos irregulares. Parece um rangido que não tinha antes, e tô começando a ficar preocupado. Já conferi as buchas e parece que algumas estão meio gastas, mas ainda não levei no mecânico para um diagnóstico mais detalhado.",
+    membro: "19/04/2025",
+    imagem: "imagens/barney.jpeg"
   }
-]
-```
+];

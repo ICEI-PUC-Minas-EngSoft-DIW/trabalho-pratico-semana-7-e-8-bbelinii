@@ -2,21 +2,20 @@
     font-family: 'race';
     src: url('./fonte/High Speed.otf') format('opentype');
     font-weight: normal;
+    font-display: swap;
 }
-
 * { box-sizing: border-box; }
 html,body { height: 100%; }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #eef7fb;
+    background: #EEF7FB;
     color: #222;
-    -webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
-
-/* header */
 .site-header {
-    background: linear-gradient(90deg,#111 0%, #6f6f6f 100%);
+    background: linear-gradient(90deg,#111 0%, #6F6F6F 100%);
     color: #fff;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -46,8 +45,6 @@ body {
     transition: color .2s, opacity .2s;
 }
 .site-nav a:hover { color:#00a0ff; opacity:1; }
-
-/* banner */
 .banner {
     max-width: 1200px;
     margin: 28px auto;
@@ -58,28 +55,28 @@ body {
     margin: 0;
     font-family: 'race', sans-serif;
     font-size: 28px;
-    color: #0b2b3a;
+    color: #0B2B3A;
     letter-spacing: 1px;
 }
-
-/* layout container */
 .container {
     max-width: 1200px;
-    margin: 18px auto 40px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 28px;
+    grid-template-columns: 250px 1fr;
+    gap: 24px;
     padding: 0 20px;
-    align-items: start;
+    margin-bottom: 40px;
+    min-height: calc(100vh - 200px);
 }
-
-/* categorias */
 .menul {
     background: #fff;
-    padding: 28px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-    height: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+.menur {
 }
 .principais .title {
     font-family: 'race', sans-serif;
@@ -94,8 +91,6 @@ body {
     font-weight: 600;
 }
 .principais li:hover { color: #007BFF; cursor: pointer; }
-
-/* busca e botao */
 .busca {
     display:flex;
     justify-content:flex-end;
@@ -119,21 +114,26 @@ body {
     cursor:pointer;
 }
 #criar:hover { background:#0056b3; }
-
-/* postagens */
-.postagens { display:flex; flex-direction:column; gap:18px; }
-.postagem {
-    display:flex;
-    gap:18px;
-    background:#fff;
-    padding:18px;
-    border-radius:10px;
-    box-shadow:0 6px 14px rgba(0,0,0,0.06);
-    align-items:flex-start;
-    transition: transform .18s ease, box-shadow .18s ease;
-    width:100%;
+.postagens { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 18px; 
 }
-.postagem:hover { transform:translateY(-6px); box-shadow:0 12px 28px rgba(0,0,0,0.08); }
+.postagem {
+    display: flex;
+    gap: 18px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    align-items: flex-start;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.postagem:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12); 
+}
 .postagem img {
     width:76px;
     height:76px;
@@ -147,32 +147,40 @@ body {
 .conteudo .texto { margin:0 0 10px; line-height:1.6; color:#222; }
 .conteudo .membro { margin:0; color:#777; font-size:13px; }
 
-/* footer */
 .site-footer {
-    background:#000;
+    background: linear-gradient(90deg,#111 0%, #6F6F6F 100%);
     color:#fff;
-    padding:12px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 -4px 12px rgba(0,0,0,0.12);
+    padding:20px;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 .site-footer img { height:40px; }
-
-/* responsividade */
 @media (max-width: 980px) {
-    .container { grid-template-columns: 300px 1fr; gap:20px; padding:0 16px; }
-    .banner p { font-size:22px; }
+    .banner p { font-size: 22px; }
 }
 @media (max-width: 780px) {
-    .container { grid-template-columns: 1fr; padding:0 14px; }
-    .menul { order: 2; }
-    .menur { order: 1; }
-    .busca { justify-content: flex-start; margin-bottom: 16px; }
+    .container { 
+        display: block;
+        padding: 0 14px; 
+    }
+    .menul { 
+        margin-bottom: 20px;
+    }
+    .busca { 
+        justify-content: flex-start; 
+        margin-bottom: 16px; 
+    }
     .busca input { width: 60%; }
 }
 @media (max-width: 420px) {
-    .banner p { font-size:18px; }
-    .site-nav ul { gap:12px; }
+    .banner p { font-size: 18px; }
+    .site-nav ul { gap: 12px; }
     .busca input { width: 100%; }
+    .postagem { padding: 15px; }
 }
