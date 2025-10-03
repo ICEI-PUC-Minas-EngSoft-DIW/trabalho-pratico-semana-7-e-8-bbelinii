@@ -13,7 +13,7 @@ Leia o enunciado completo no Canvas.
 ## Informações Gerais
 
 - Nome: Bernardo Belini Vale
-- Matricula: 
+- Matricula: 1431332
 - Proposta de projeto escolhida: Blog Automotivo
 - Breve descrição sobre seu projeto: Um blog dedicado a entusiastas de automóveis onde os usuários podem compartilhar experiências, problemas e soluções relacionados aos seus veículos. A plataforma permite visualizar postagens na página principal e acessar detalhes completos ao clicar em cada postagem.
 
@@ -46,4 +46,9 @@ const postagens = [
     membro: "19/04/2025",
     imagem: "imagens/barney.jpeg"
   }
+<<<<<<< HEAD
 ];
+=======
+]
+```
+>>>>>>> 4916e07becfc19d14b457d504626193f194f69a8
