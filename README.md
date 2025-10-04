@@ -46,9 +46,4 @@ const postagens = [
     membro: "19/04/2025",
     imagem: "imagens/barney.jpeg"
   }
-<<<<<<< HEAD
-];
-=======
-]
-```
->>>>>>> 4916e07becfc19d14b457d504626193f194f69a8
+
